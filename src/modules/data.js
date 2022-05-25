@@ -1,3 +1,5 @@
-export const SCORE = {
+const SCORE = {
   SCOREArr: [],
 };
+
+export default SCORE;

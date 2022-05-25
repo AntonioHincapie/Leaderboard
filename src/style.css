@@ -38,7 +38,7 @@ input {
 #scores-head {
   display: flex;
   align-items: center;
-  gap: 2em ;
+  gap: 2em;
 }
 
 #score-table {
