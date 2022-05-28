@@ -1,12 +1,16 @@
-import SCORE from './data.js';
-import { setStorage } from './storage.js';
+import { urlAPI } from './data.js';
 
-const name = document.getElementById('name');
-const point = document.getElementById('score');
-
-const addScore = () => {
-  SCORE.SCOREArr.push({ name: name.value, points: point.value });
-  setStorage();
+const addScore = async (user, score) => {
+  await fetch(urlAPI, {
+    method: 'POST',
+    body: JSON.stringify({
+      user,
+      score,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  });
 };
 
 export default addScore;
