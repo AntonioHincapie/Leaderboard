@@ -1,16 +1,18 @@
-import SCORE from './data.js';
-import { getStorage } from './storage.js';
+import { getStorage } from './data.js';
 
-const scoreTable = document.getElementById('score-table');
-
-const printScore = () => {
-  getStorage();
+const printScore = (datos) => {
+  const scoreTable = document.getElementById('score-table');
   scoreTable.innerHTML = '';
-  for (let i = 0; i < SCORE.SCOREArr.length; i += 1) {
+  datos.forEach((score) => {
     const scoreItem = document.createElement('p');
-    scoreItem.textContent = `${SCORE.SCOREArr[i].name} ${SCORE.SCOREArr[i].points}`;
+    scoreItem.textContent = `${score.user} ${score.score}`;
     scoreTable.appendChild(scoreItem);
-  }
+  });
 };
 
-export default printScore;
+const getScores = async () => {
+  const datosScore = await getStorage();
+  printScore(datosScore.result);
+};
+
+export default getScores;
