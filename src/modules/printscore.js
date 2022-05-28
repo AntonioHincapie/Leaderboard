@@ -1,4 +1,4 @@
-import { getStorage } from "./data.js";
+import { getStorage } from './data.js';
 
 const printScore = (datos) => {
   const scoreTable = document.getElementById('score-table');
