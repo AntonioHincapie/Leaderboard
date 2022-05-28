@@ -28,7 +28,7 @@ Webpack modules for Lodash, HTML Plugin, Web Server, Style, Local Linters from M
 
 ## Live Demo
 
-[Leaderboard](https://antoniohincapie.github.io/to-do-list/Leaderboard)
+[Leaderboard](https://antoniohincapie.github.io/Leaderboard/)
 
 ## Source
 
